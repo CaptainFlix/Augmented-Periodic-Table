@@ -23,6 +23,8 @@
                 <a-asset-item id="carbon-glb" src="Carbon.glb"></a-asset-item>
                 <a-asset-item id="oxygen-glb" src="Oxygen.glb"></a-asset-item>
                 <a-asset-item id="sodium-glb" src="Sodium.glb"></a-asset-item>
+                <a-asset-item id="calcium-glb" src="Calcium.glb"></a-asset-item>
+                <a-asset-item id="iron-glb" src="Iron.glb"></a-asset-item>
             </a-assets>
 
             <a-marker
@@ -88,6 +90,40 @@
                     position="0 0 0.5"
                     animation-mixer="loop: repeat"
                     gltf-model="#sodium-glb"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+
+            <a-marker
+                type="pattern"
+                url="Calcium.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+            >
+                <a-entity
+                    scale="0.5 0.5 0.5"
+                    position="0 0 0.5"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#calcium-glb"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+
+            <a-marker
+                type="pattern"
+                url="Iron.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+            >
+                <a-entity
+                    scale="0.5 0.5 0.5"
+                    position="0 0 0.5"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#iron-glb"
                     class="clickable"
                     gesture-handler
                 ></a-entity>
