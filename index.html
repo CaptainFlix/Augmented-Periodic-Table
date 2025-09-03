@@ -19,27 +19,75 @@
             gesture-detector
         >
             <a-assets>
-                <a-asset-item
-                    id="hydrogen-glb"
-                    src="Hydrogen.glb"
-                ></a-asset-item>
+                <a-asset-item id="hydrogen-glb" src="Hydrogen.glb"></a-asset-item>
+                <a-asset-item id="carbon-glb" src="Carbon.glb"></a-asset-item>
+                <a-asset-item id="oxygen-glb" src="Oxygen.glb"></a-asset-item>
+                <a-asset-item id="sodium-glb" src="Sodium.glb"></a-asset-item>
             </a-assets>
 
             <a-marker
-                id="hydrogen-marker"
                 type="pattern"
-                preset="custom"
                 url="Hydrogen.patt"
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
             >
                 <a-entity
-                    id="hydrogen-model"
                     scale="0.5 0.5 0.5"
                     position="0 0 0.5"
                     animation-mixer="loop: repeat"
                     gltf-model="#hydrogen-glb"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+            
+            <a-marker
+                type="pattern"
+                url="Carbon.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+            >
+                <a-entity
+                    scale="0.5 0.5 0.5"
+                    position="0 0 0.5"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#carbon-glb"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+
+            <a-marker
+                type="pattern"
+                url="Oxygen.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+            >
+                <a-entity
+                    scale="0.5 0.5 0.5"
+                    position="0 0 0.5"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#oxygen-glb"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+            
+            <a-marker
+                type="pattern"
+                url="Sodium.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+            >
+                <a-entity
+                    scale="0.5 0.5 0.5"
+                    position="0 0 0.5"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#sodium-glb"
                     class="clickable"
                     gesture-handler
                 ></a-entity>
